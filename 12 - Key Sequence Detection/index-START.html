@@ -7,6 +7,22 @@
 </head>
 <body>
 <script>
+  const pressed = [];
+  const secretCode = 'secret';
+
+  window.addEventListener('keyup', (e)=> {
+    //console.log(e.key);
+    pressed.push(e.key);
+    console.log(pressed);
+    if (pressed.join('') == secretCode) {
+      alert('jackpot');
+    }
+    if(pressed.length == secretCode.length){
+      //remove the first element of the array
+      pressed.shift();
+    }
+
+  });
 </script>
 </body>
 </html>

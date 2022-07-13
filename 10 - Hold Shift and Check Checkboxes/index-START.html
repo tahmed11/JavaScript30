@@ -96,6 +96,15 @@
   </div>
 
 <script>
+function onchecked(){
+  console.log(`checked ${this}`);
+}
+
+const checkboxes = document.querySelectorAll('.item input[type="checkbox"]');
+console.log(checkboxes);
+checkboxes.forEach(checkbox => {
+  checkbox.addEventListener('click',onchecked);
+});
 </script>
 </body>
 </html>
